@@ -1,7 +1,0 @@
-[submodule "custom/plugins/zsh-autosuggestions"]
-	path = custom/plugins/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions.git
-	ignore = dirty
-[submodule "custom/themes/powerlevel9k"]
-	path = custom/themes/powerlevel9k
-	url = https://github.com/Powerlevel9k/powerlevel9k.git
