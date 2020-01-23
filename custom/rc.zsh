@@ -19,7 +19,7 @@ export PATH
 # Custom Aliases
 alias tsn='ts-node'
 alias trf='ssh exr0n@hop.exr0n.com -p 2222'
-alias gg='git add -A && git commit && git push'
+alias gg='git add -A && git commit && git push &'
 #    python stuff
 alias py='python3'
 alias pym='python3 -m'
