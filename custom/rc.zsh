@@ -26,8 +26,6 @@ alias pym='python3 -m'
 #    Alias to auto open files with vim
 alias -s {txt,md,cpp,rs,py,properties,yml,yaml}=vim
 
-~/.stable_scripts/setup_prog_env.zsh
-
 # "Advanced Tab Completion" from https://opensource.com/article/18/9/tips-productivity-zsh - removed because it's super slow
 # autoload -U compinit
 # compinit
