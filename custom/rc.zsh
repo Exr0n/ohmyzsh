@@ -23,11 +23,15 @@ alias gg='git add -A && git commit; git push &'
 alias gpl='git pull'
 #    python stuff
 alias py='python3'
-alias pym='python3 -m'
+alias pip='python3 -m pip'
 #    Alias to auto open files with vim
 alias -s {txt,md,cpp,rs,py,properties,yml,yaml}=vim
 
+#    One off aliases (like config commands)
+alias set_right_alt='cd $ZSH_CUSTOM/keymap_util && hidutil property --set $(./map) && -'
+
+# rust/cargo things
 source $HOME/.cargo/env
-# "Advanced Tab Completion" from https://opensource.com/article/18/9/tips-productivity-zsh - removed because it's super slow
-# autoload -U compinit
-# compinit
+alias cn='cargo new'
+alias cr='cargo run'
+
