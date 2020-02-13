@@ -32,6 +32,6 @@ alias set_right_alt='cd $ZSH_CUSTOM/keymap_util && hidutil property --set $(./ma
 
 # rust/cargo things
 source $HOME/.cargo/env
-alias cn='cargo new'
+alias cn='cargo new --vcs git'
 alias cr='cargo run'
 
