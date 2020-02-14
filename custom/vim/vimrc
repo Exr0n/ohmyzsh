@@ -16,6 +16,7 @@ autocmd vimenter * wincmd l
 
 "map cn to NERDTreeToggle
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
 
 " set up YouCompleteMe, which is apparently a pain (jack doesn't want to teach me)
@@ -152,3 +153,11 @@ let mapleader = " "
 nnoremap <Leader>c :noh<return>
 " TODO: for some reason this doesn't work...
 imap <hh> <Esc>
+" panes and splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+set splitbelow
+set splitright
