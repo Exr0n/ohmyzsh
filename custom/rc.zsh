@@ -16,6 +16,10 @@ export PATH
 # Zsh Completions (https://medium.com/@beatrizmrg/gaining-efficiency-with-iterm-prompt-customization-on-macos-3ad212f5bfde)
 # shouldn't need this with zsh-autosuggest # fpath=(/usr/local/share/zsh-completions $fpath)
 
+export ZSH_CUSTOM="$ZSH_CUSTOM"
+export VIMROOT="$ZSH_CUSTOM/vim"
+export VIMINIT='let $MYVIMRC="$ZSH_CUSTOM/vim/vimrc" | source $MYVIMRC'
+
 # Custom Aliases
 alias tsn='ts-node'
 alias trf='ssh exr0n@hop.exr0n.com -p 2222'
