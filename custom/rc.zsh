@@ -23,7 +23,7 @@ export VIMINIT='let $MYVIMRC="$ZSH_CUSTOM/vim/vimrc" | source $MYVIMRC'
 # Custom Aliases
 alias tsn='ts-node'
 alias trf='ssh exr0n@hop.exr0n.com -p 2222'
-alias gg='git add -A && git commit; git push &'
+alias gg='git add -A && git commit; nohup git push >/dev/null 2>&1 &'
 alias gpl='git pull'
 #    python stuff
 alias py='python3'
