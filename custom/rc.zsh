@@ -1,3 +1,5 @@
+export TERM="xterm-256color"
+
 # Added by Canopy installer on 2015-11-14
 # VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1
 #VIRTUAL_ENV_DISABLE_PROMPT='' source '/Users/lamnguyen/Library/Enthought/Canopy_64bit/User/bin/activate'
@@ -24,6 +26,10 @@ alias gpl='git pull'
 #    python stuff
 alias py='python3'
 alias pym='python3 -m'
+#    screen stuff
+alias sl='screen -ls'
+alias ss='screen -S '
+alias s='trf'
 #    Alias to auto open files with vim
 alias -s {txt,md,cpp,rs,py,properties,yml,yaml}=vim
 
