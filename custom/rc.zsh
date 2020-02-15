@@ -51,3 +51,7 @@ source $HOME/.cargo/env
 alias cn='cargo new --vcs git'
 alias cr='cargo run'
 
+# functions
+#    cd to parent directory of file, https://askubuntu.com/a/316632
+function fcd () { [ -f "$1" ] && { \cd "$(dirname "$1")"; } || { \cd "$1"; } ; pwd; }
+alias cd='fcd'
