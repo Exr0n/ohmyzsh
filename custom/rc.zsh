@@ -18,13 +18,23 @@ export PATH
 # Zsh Completions (https://medium.com/@beatrizmrg/gaining-efficiency-with-iterm-prompt-customization-on-macos-3ad212f5bfde)
 # shouldn't need this with zsh-autosuggest # fpath=(/usr/local/share/zsh-completions $fpath)
 
+export ZSH_CUSTOM="$ZSH_CUSTOM"
+export VIMROOT="$ZSH_CUSTOM/vim"
+export VIMINIT='let $MYVIMRC="$ZSH_CUSTOM/vim/vimrc" | source $MYVIMRC'
+
 # Custom Aliases
 alias tsn='ts-node'
 alias trf='ssh exr0n@hop.exr0n.com -p 2222'
-alias gg='git add -A && git commit; git push &'
+#    tmux
+alias tmux='tmux attach || tmux -f $ZSH_CUSTOM/tmux/tmux.conf'
+
+
+#    git
+alias gg='git add -A && git commit; nohup git push >/dev/null 2>&1 &'
 alias gpl='git pull'
 #    python stuff
 alias py='python3'
+alias pip='python3 -m pip'
 alias pym='python3 -m'
 #    screen stuff
 alias sl='screen -ls'
@@ -33,6 +43,11 @@ alias s='trf'
 #    Alias to auto open files with vim
 alias -s {txt,md,cpp,rs,py,properties,yml,yaml}=vim
 
-# "Advanced Tab Completion" from https://opensource.com/article/18/9/tips-productivity-zsh - removed because it's super slow
-# autoload -U compinit
-# compinit
+#    One off aliases (like config commands)
+alias set_right_alt='cd $ZSH_CUSTOM/keymap_util && hidutil property --set $(./map) && -'
+
+# rust/cargo things
+source $HOME/.cargo/env
+alias cn='cargo new --vcs git'
+alias cr='cargo run'
+
