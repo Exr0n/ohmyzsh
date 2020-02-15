@@ -151,6 +151,7 @@ endif
 " custom keymaps
 let mapleader = " "
 nnoremap <Leader>c :noh<return>
+nnoremap <Leader>g 62G
 " TODO: for some reason this doesn't work...
 imap <hh> <Esc>
 " panes and splits
