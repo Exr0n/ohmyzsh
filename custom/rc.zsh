@@ -29,8 +29,9 @@ alias trf='ssh exr0n@hop.exr0n.com -p 2222'
 alias tmux='tmux attach || tmux -f $ZSH_CUSTOM/tmux/tmux.conf'
 alias tn='\tmux new -s'
 #    git
-alias gg='git add -A && git commit; nohup git push >/dev/null 2>&1 &'
+alias gg='git add -A && git commit; gp'
 alias gpl='git pull'
+alias gp='nohup git push > /dev/null 2>&1 &'
 #    python stuff
 alias py='python3'
 alias pip='python3 -m pip'
