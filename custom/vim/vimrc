@@ -1,8 +1,6 @@
 set nocompatible
 exe 'set rtp+=' . $VIMROOT
 
-" from jack liu
-
 syntax on
 
 call plug#begin($VIMROOT . '/plugged')
@@ -39,12 +37,14 @@ Plug 'cocopon/iceberg.vim'
 " HUD
 Plug 'maralla/validator.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'edkolev/tmuxline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'luochen1990/rainbow'
 Plug 'airblade/vim-gitgutter'
 Plug 'ryanoasis/vim-devicons'
+"   tmux integration
+Plug 'edkolev/tmuxline.vim'
+Plug 'christoomey/vim-tmux-navigator'
 
 let g:airline_theme='bubblegum'
 
