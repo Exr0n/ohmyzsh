@@ -25,10 +25,6 @@ export VIMINIT='let $MYVIMRC="$ZSH_CUSTOM/vim/vimrc" | source $MYVIMRC'
 # Custom Aliases
 alias tsn='ts-node'
 alias trf='ssh exr0n@hop.exr0n.com -p 2222'
-#    tmux
-alias tmux='tmux -f $ZSH_CUSTOM/tmux/tmux.conf'
-alias tad='tmux attach -d'
-alias tn='\tmux new -s'
 #    git
 alias gg='git add -A && git commit; gp'
 alias gpl='git pull'

@@ -162,6 +162,8 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+" clipboard https://coderwall.com/p/v-st8w/vim-copy-to-system-clipboard-on-a-mac
+vmap '' :w !pbcopy<CR><CR>
 
 set splitbelow
 set splitright
