@@ -155,8 +155,7 @@ endif
 let mapleader = " "
 nnoremap <Leader>cc :noh<return>
 nnoremap <Leader>g 62G
-" TODO: for some reason this doesn't work...
-imap <hh> <Esc>
+inoremap jh <Esc>
 " panes and splits
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
