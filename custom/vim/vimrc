@@ -156,6 +156,7 @@ let mapleader = " "
 nnoremap <Leader>cc :noh<return>
 nnoremap <Leader>g 62G
 inoremap jh <Esc>
+set timeoutlen=500
 " panes and splits
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
