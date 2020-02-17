@@ -1,4 +1,4 @@
 {
-  "suggest.noselect": false,
-  "suggest.triggerAfterInsertEnter": true
+    "suggest.noselect": false,
+    "suggest.triggerAfterInsertEnter": true,
 }
