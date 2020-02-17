@@ -23,6 +23,9 @@ let NERDTreeShowHidden=1
 Plug 'dkarter/bullets.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" LSP / Linting
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
@@ -35,8 +38,7 @@ Plug 'niklas-8/vim-darkspace'
 Plug 'cocopon/iceberg.vim'
 
 " HUD
-Plug 'maralla/validator.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'maralla/validator.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'luochen1990/rainbow'
