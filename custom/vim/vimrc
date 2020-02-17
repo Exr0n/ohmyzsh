@@ -8,7 +8,7 @@ call plug#begin($VIMROOT . '/plugged')
 Plug 'scrooloose/nerdtree'
 autocmd vimenter * NERDTree
 " auto quit if nerdtree is the only open window
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " auto start on the correct window (not nerdtree)
 autocmd vimenter * wincmd l
 
