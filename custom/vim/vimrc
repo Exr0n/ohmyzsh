@@ -6,15 +6,20 @@ syntax on
 call plug#begin($VIMROOT . '/plugged')
 
 Plug 'scrooloose/nerdtree'
-" auto quit if nerdtree is the only open window
 autocmd vimenter * NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" auto quit if nerdtree is the only open window
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " auto start on the correct window (not nerdtree)
 autocmd vimenter * wincmd l
 
 "map cn to NERDTreeToggle
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
 
 
 " set up YouCompleteMe, which is apparently a pain (jack doesn't want to teach me)
