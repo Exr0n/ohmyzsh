@@ -34,8 +34,11 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " CoC options
 set cmdheight=2
 set signcolumn=yes
-inoremap <silent><expr> <Tab> pumvisible()?"\<Down>":"\<Tab>"
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+"   Completion window
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 "   Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -63,6 +66,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'edkolev/tmuxline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 
+let g:tmuxline_preset = 'nightly_fox'
+
 let g:airline_theme='bubblegum'
 
 
@@ -84,9 +89,9 @@ call plug#end()
 
 " My Customs
 " " CUSTOM: change backup dir https://stackoverflow.com/a/1625850/10372825
-set backupdir=~/.vim/autogentmp//,.
-set directory=~/.vim/autogentmp//,.
-set undodir=~/.vim/autogentmp//,~/.vim/autogentmp/undo//,.
+set backupdir=$VIMROOT/autogentmp//
+set directory=$VIMROOT/autogentmp//
+set undodir=$VIMROOT/autogentmp//,~/.vim/autogentmp/undo//
 
 " jump to previous position https://stackoverflow.com/questions/774560/in-vim-how-do-i-get-a-file-to-open-at-the-same-line-number-i-closed-it-at-last
 if has("autocmd")
@@ -164,9 +169,13 @@ endif
 " custom keymaps
 let mapleader = " "
 nnoremap <Leader>cc :noh<return>
-nnoremap <Leader>g 62G
 inoremap jh <Esc>
+inoremap jt <Esc>:w<return>
 set timeoutlen=500
+" movement in insert mode
+iunmap <C-h>
+inoremap <C-h> <Left>
+inoremap <C-l> <right>
 " panes and splits
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
