@@ -14,7 +14,7 @@ autocmd vimenter * wincmd l
 
 "map cn to NERDTreeToggle
 nmap <Leader>n :NERDTreeToggle<CR>
-vmap <Leader>n :NERDTreeToggle<CR>
+xmap <Leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -45,6 +45,11 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+" ALE
+Plug 'dense-analysis/ale'
+let g:ale_linters = {
+\   'cpp': ['clangtidy'],
+\}
 
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
@@ -57,7 +62,6 @@ Plug 'niklas-8/vim-darkspace'
 Plug 'cocopon/iceberg.vim'
 
 " HUD
-Plug 'dense-analysis/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'luochen1990/rainbow'
@@ -70,6 +74,7 @@ Plug 'christoomey/vim-tmux-navigator'
 let g:tmuxline_preset = 'nightly_fox'
 
 let g:airline_theme='bubblegum'
+
 
 
 " HUD Toggles
@@ -172,7 +177,7 @@ let mapleader = " "
 set timeoutlen=500
 nnoremap <Leader>cc :noh<return>
 nmap t <Plug>NERDCommenterInvert
-vmap t <Plug>NERDCommenterInvert
+xmap t <Plug>NERDCommenterInvert
 inoremap jh <Esc>
 inoremap jt <Esc>:w<return>
 " movement in insert mode
@@ -185,7 +190,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 " clipboard https://coderwall.com/p/v-st8w/vim-copy-to-system-clipboard-on-a-mac
-vmap '' :w !pbcopy<CR><CR>
+xmap '' :w !pbcopy<CR><CR>
 nmap <Leader>'' :%w !pbcopy<CR><CR>
 
 set splitbelow
