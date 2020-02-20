@@ -29,7 +29,7 @@ alias vim='nvim'
 #    git
 alias gg='git add -A && git commit; gp'
 alias gpl='git pull'
-alias gp='nohup git push > /dev/null 2>&1 &'
+alias gp='nohup git push > /dev/null &'
 #    python stuff
 alias py='python3'
 alias pip='python3 -m pip'
