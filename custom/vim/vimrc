@@ -1,9 +1,10 @@
 set nocompatible
-exe 'set rtp+=' . $VIMROOT
+exe 'set rtp+=' . $VIMCONFIG
 
-syntax on
+" source vimrc twice... TODO: this is really jank
+autocmd vimenter * source $MYVIMRC
 
-call plug#begin($VIMROOT . '/plugged')
+call plug#begin($VIMCONFIG . '/plugged')
 
 Plug 'scrooloose/nerdtree'
 autocmd vimenter * NERDTree
@@ -47,9 +48,6 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 " ALE
 Plug 'dense-analysis/ale'
-let g:ale_linters = {
-\   'cpp': ['clangtidy'],
-\}
 
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
@@ -61,7 +59,6 @@ Plug 'keith/parsec.vim'
 Plug 'niklas-8/vim-darkspace'
 Plug 'cocopon/iceberg.vim'
 
-" HUD
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'luochen1990/rainbow'
@@ -95,9 +92,9 @@ call plug#end()
 
 " My Customs
 " " CUSTOM: change backup dir https://stackoverflow.com/a/1625850/10372825
-set backupdir=$VIMROOT/autogentmp//
-set directory=$VIMROOT/autogentmp//
-set undodir=$VIMROOT/autogentmp//,~/.vim/autogentmp/undo//
+set backupdir=$VIMCONFIG/autogentmp//
+set directory=$VIMCONFIG/autogentmp//
+set undodir=$VIMCONFIG/autogentmp//,~/.vim/autogentmp/undo//
 
 " jump to previous position https://stackoverflow.com/questions/774560/in-vim-how-do-i-get-a-file-to-open-at-the-same-line-number-i-closed-it-at-last
 if has("autocmd")
@@ -184,14 +181,10 @@ inoremap jt <Esc>:w<return>
 iunmap <C-h>
 inoremap <C-h> <Left>
 inoremap <C-l> <right>
-" panes and splits
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 " clipboard https://coderwall.com/p/v-st8w/vim-copy-to-system-clipboard-on-a-mac
 xmap '' :w !pbcopy<CR><CR>
 nmap <Leader>'' :%w !pbcopy<CR><CR>
 
+" split direction
 set splitbelow
 set splitright
