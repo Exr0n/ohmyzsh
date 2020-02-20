@@ -20,7 +20,8 @@ export PATH
 
 export ZSH_CUSTOM="$ZSH_CUSTOM"
 export VIMROOT="$ZSH_CUSTOM/vim"
-export VIMINIT='let $MYVIMRC="$ZSH_CUSTOM/vim/vimrc" | source $MYVIMRC'
+export VIMCONFIG="$VIMROOT"
+export VIMINIT='let $MYVIMRC="$VIMCONFIG/vimrc" | source $MYVIMRC'
 
 # Custom Aliases
 alias tsn='ts-node'
