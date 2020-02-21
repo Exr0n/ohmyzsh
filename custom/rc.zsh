@@ -20,6 +20,7 @@ export PATH
 
 # env variables
 export ZSH_CUSTOM="$ZSH_CUSTOM"
+export EDITOR="vim"
 #   vim stuff
 export VIMROOT="$ZSH_CUSTOM/vim"
 export VIMCONFIG="$VIMROOT"
