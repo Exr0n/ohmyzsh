@@ -1,6 +1,7 @@
 {
     "suggest.triggerAfterInsertEnter": true,
     "diagnostic.checkCurrentLine": true,
+    "diagnostic.signOffset": 9999999,
     "languageserver": {
         "ccls": {
             "command": "ccls",

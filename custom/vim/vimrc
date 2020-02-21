@@ -4,7 +4,7 @@ exe 'set rtp+=' . $VIMCONFIG
 " source vimrc twice... TODO: this is really jank
 autocmd vimenter * source $MYVIMRC
 
-call plug#begin($VIMCONFIG . '/plugged')
+call plug#begin($VIMCONFIG.'/plugged')
 
 Plug 'scrooloose/nerdtree'
 autocmd vimenter * NERDTree
@@ -58,8 +58,6 @@ Plug 'christoomey/vim-tmux-navigator'
 let g:tmuxline_preset = 'nightly_fox'
 
 let g:airline_theme='bubblegum'
-
-
 
 " HUD Toggles
 Plug 'junegunn/limelight.vim'
@@ -162,9 +160,9 @@ endif
 " custom keymaps
 let mapleader = " "
 set timeoutlen=500
-nnoremap <Leader>cc :noh<return>
-nmap t <Plug>NERDCommenterInvert
-xmap t <Plug>NERDCommenterInvert
+nnoremap <Leader>h :noh<return>
+nmap <Leader>t <Plug>NERDCommenterInvert
+xmap <Leader>t <Plug>NERDCommenterInvert
 inoremap jh <Esc>
 inoremap jt <Esc>:w<return>
 " movement in insert mode
