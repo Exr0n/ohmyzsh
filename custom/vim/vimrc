@@ -7,7 +7,6 @@ autocmd vimenter * source $MYVIMRC
 call plug#begin($VIMCONFIG.'/plugged')
 
 Plug 'scrooloose/nerdtree'
-autocmd vimenter * NERDTree
 " auto quit if nerdtree is the only open window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " auto start on the correct window (not nerdtree)
