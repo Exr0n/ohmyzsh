@@ -48,7 +48,7 @@ alias -s {txt,md,cpp,rs,py,properties,yml,yaml}=vim
 
 #    One off aliases (like config commands)
 #alias set_right_alt='cd $ZSH_CUSTOM/keymap_util && hidutil property --set $(./map) && -'
-hidutil property --set $($ZSH_CUSTOM/keymap_util/map)
+hidutil property --set $($ZSH_CUSTOM/keymap_util/map) > /dev/null
 
 # rust/cargo things
 source $HOME/.cargo/env
