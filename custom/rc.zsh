@@ -31,6 +31,7 @@ export VIMINIT='source $MYVIMRC'
 alias tsn='ts-node'
 alias trf='ssh exr0n@hop.exr0n.com -p 2222'
 alias vim='nvim'
+alias pls='sudo'
 #    git
 alias gg='git add -A && git commit; gp'
 alias gpl='git pull'
