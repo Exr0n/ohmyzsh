@@ -1,3 +1,4 @@
+# NOTE: This is outdated! see p10k.zsh
 # Set prompt
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time status root_indicator background_jobs vcs)
