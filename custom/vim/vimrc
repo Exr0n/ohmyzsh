@@ -12,6 +12,7 @@ autocmd vimenter * source $MYVIMRC
 
 call plug#begin($VIMCONFIG.'/plugged')
 
+" Meta File Stuff
 Plug 'scrooloose/nerdtree'
 " auto quit if nerdtree is the only open window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -27,6 +28,8 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
+
+Plug 'rickhowe/diffchar.vim'
 
 
 " set up YouCompleteMe, which is apparently a pain (jack doesn't want to teach me)
