@@ -379,12 +379,12 @@
   function my_git_formatter() {
     emulate -L zsh
 
-    if [[ -n $P9K_CONTENT ]]; then
-      # If P9K_CONTENT is not empty, use it. It's either "loading" or from vcs_info (not from
-      # gitstatus plugin). VCS_STATUS_* parameters are not available in this case.
-      typeset -g my_git_format=$P9K_CONTENT
-      return
-    fi
+    #if [[ -n $P9K_CONTENT ]]; then
+      ## If P9K_CONTENT is not empty, use it. It's either "loading" or from vcs_info (not from
+      ## gitstatus plugin). VCS_STATUS_* parameters are not available in this case.
+      #typeset -g my_git_format=$P9K_CONTENT
+      #return
+    #fi
 
     if (( $1 )); then
       # Styling for up-to-date Git status.
@@ -402,10 +402,22 @@
       local conflicted='%244F'  # grey foreground
     fi
 
+    # custom coloring
+    local final_color
+    (( VCS_STATUS_COMMITS_BEHIND || VCS_STATUS_COMMITS_AHEAD ||\
+        VCS_STATUS_PUSH_COMMITS_BEHIND || VCS_STATUS_PUSH_COMMITS_AHEAD ||\
+        VCS_STATUS_STASHES )) && final_color="${clean}"
+
+    [[ -n $VCS_STATUS_ACTION ]] && final_color="${conflicted}"
+    (( VCS_STATUS_NUM_CONFLICTED )) && final_color="${conflicted}"
+    (( VCS_STATUS_NUM_STAGED || VCS_STATUS_NUM_UNSTAGED )) && final_color="${modified}"
+    (( VCS_STATUS_NUM_UNTRACKED )) && final_color="${untracked}"
+    (( VCS_STATUS_NUM_UNSTAGED == -1 )) && final_color="${modified}"
+
     local res
     local where  # branch or tag
     if [[ -n $VCS_STATUS_LOCAL_BRANCH ]]; then
-      res+="${clean}${POWERLEVEL9K_VCS_BRANCH_ICON}"
+      res+="${final_color}${POWERLEVEL9K_VCS_BRANCH_ICON}"
       where=${(V)VCS_STATUS_LOCAL_BRANCH}
     elif [[ -n $VCS_STATUS_TAG ]]; then
       res+="${meta}#"
@@ -415,7 +427,7 @@
     # If local branch name or tag is at most 32 characters long, show it in full.
     # Otherwise show the first 12 … the last 12.
     (( $#where > 32 )) && where[13,-13]="…"
-    res+="${clean}${where//\%/%%}"  # escape %
+    res+="${final_color}${where//\%/%%}"  # escape %
 
     # Display the current Git commit if there is no branch or tag.
     # Tip: To always display the current Git commit, remove `[[ -z $where ]] &&` from the next line.
