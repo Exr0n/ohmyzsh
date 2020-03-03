@@ -61,9 +61,9 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
 "   tmux integration
 Plug 'edkolev/tmuxline.vim'
+source $VIMCONFIG/tmuxline-config.vim
 Plug 'christoomey/vim-tmux-navigator'
 
-let g:tmuxline_preset = 'nightly_fox'
 
 
 " HUD Toggles

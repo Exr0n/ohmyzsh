@@ -39,10 +39,10 @@
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
-    os_icon                 # os identifier
+    vcs                     # git status
     dir                     # current directory
     # =========================[ Line #2 ]=========================
-    #newline                 # \n
+    newline                 # \n
     prompt_char             # prompt symbol
   )
 
@@ -53,7 +53,6 @@
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
     status                  # exit code of the last command
-    vcs                     # git status
     command_execution_time  # duration of the last command
     background_jobs         # presence of background jobs
     direnv                  # direnv status (https://direnv.net/)
@@ -104,11 +103,11 @@
     taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
     time                    # current time
     #newline
-    # ip                    # ip address and bandwidth usage for a specified network interface
     # public_ip             # public IP address
     # proxy                 # system-wide http/https/ftp proxy
     battery               # internal battery
     wifi                  # wifi speed
+    # ip                    # ip address and bandwidth usage for a specified network interface
     # example               # example user-defined segment (see prompt_example function below)
   )
 
