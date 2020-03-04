@@ -105,8 +105,8 @@
     #newline
     # public_ip             # public IP address
     # proxy                 # system-wide http/https/ftp proxy
-    battery               # internal battery
-    wifi                  # wifi speed
+    # battery               # internal battery
+    # wifi                  # wifi speed
     # ip                    # ip address and bandwidth usage for a specified network interface
     # example               # example user-defined segment (see prompt_example function below)
   )
