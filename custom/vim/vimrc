@@ -53,16 +53,15 @@ Plug 'keith/parsec.vim'
 Plug 'niklas-8/vim-darkspace'
 Plug 'cocopon/iceberg.vim'
 "   HUD
-" Removed for speed:
-"Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+" TODO: failed attempt at loading it later and async
+"Plug 'vim-airline/vim-airline', { 'on': 'MyAsyncLoad' }
 Plug 'luochen1990/rainbow'
 Plug 'airblade/vim-gitgutter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
 "   tmux integration
-Plug 'edkolev/tmuxline.vim'
-source $VIMCONFIG/tmuxline-config.vim
+"Plug 'edkolev/tmuxline.vim' | source $VIMCONFIG/tmuxline-config.vim
 Plug 'christoomey/vim-tmux-navigator'
 
 
@@ -102,6 +101,7 @@ set scrolloff=5 " display 8 lines above and below cursor at all times
 set matchpairs+=<:>
 
 " passive and HUD
+autocmd VimEnter * AirlineRefresh " TODO: cuz it doesn't work sometimes:
 set number " line numbers
 set ruler " display current cursor "coordinates"
 set showmatch " highlight the matching bracket
@@ -184,3 +184,7 @@ nmap <Leader>yy :%w !pbcopy<CR><CR>
 " split direction
 set splitbelow
 set splitright
+
+" janky performance hacks
+"command! MyAsyncLoad echom "AsyncLoaded"
+"autocmd vimenter * MyAsyncLoad
