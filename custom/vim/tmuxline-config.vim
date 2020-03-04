@@ -3,7 +3,7 @@ let g:tmuxline_preset = {
         \'c'    : ['#(gitmux -cfg $ZSH_CUSTOM/tmux/gitmux.conf "#{pane_current_path}")'],
         \'win'  : '#I #W',
         \'cwin' : '#I #W',
-        \'x'    : ['#{cpu_fg_color} CPU: #{cpu_icon} #{cpu_percentage}', '#{battery_color_fg} #{battery_icon} #{battery_percentage}'],
+        \'x'    : ['#{cpu_fg_color} #{cpu_icon} #{cpu_percentage}', '#{battery_color_fg} #{battery_icon} #{battery_percentage}'],
         \'y'    : ['%a | %d %b %Y | %H:%M'],
         \'z'    : ['#H']}
 
