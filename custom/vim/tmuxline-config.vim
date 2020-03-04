@@ -3,7 +3,9 @@ let g:tmuxline_preset = {
         \'c'    : ['#(gitmux -cfg $ZSH_CUSTOM/tmux/gitmux.conf "#{pane_current_path}")'],
         \'win'  : '#I #W',
         \'cwin' : '#I #W',
-        \'x'    : ['#{cpu_fg_color} CPU: #{cpu_icon} #{cpu_percentage}', '#{battery_status_fg}#{battery_icon} #{battery_percentage}'],
+        \'x'    : ['#{cpu_fg_color} CPU: #{cpu_icon} #{cpu_percentage}', '#{battery_color_fg} #{battery_icon} #{battery_percentage}'],
         \'y'    : ['%a | %d %b %Y | %H:%M'],
         \'z'    : ['#H']}
-" TODO: tmux plugins don't seem to work
+
+silent exec '!tmux source $ZSH_CUSTOM/tmux/tmux.conf &'
+" Source tmux.conf again to make tpm + status line work... super jank as well

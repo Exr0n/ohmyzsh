@@ -53,7 +53,8 @@ Plug 'keith/parsec.vim'
 Plug 'niklas-8/vim-darkspace'
 Plug 'cocopon/iceberg.vim'
 "   HUD
-Plug 'vim-airline/vim-airline'
+" Removed for speed:
+"Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'luochen1990/rainbow'
 Plug 'airblade/vim-gitgutter'
