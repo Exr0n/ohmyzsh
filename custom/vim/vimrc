@@ -169,8 +169,15 @@ endif
 let mapleader = " "
 set timeoutlen=500
 nnoremap <Leader>h :noh<return>
+" nerd commenter
 nmap <Leader>t <Plug>NERDCommenterInvert
 xmap <Leader>t <Plug>NERDCommenterInvert
+" coc jump to error/warning
+nmap gn <Plug>(coc-diagnostic-next)
+nmap gN <Plug>(coc-diagnostic-prev)
+nmap ge <Plug>(coc-diagnostic-next-error)
+nmap gE <Plug>(coc-diagnostic-prev-error)
+"no escape key (escape pressing escape)
 inoremap jh <Esc>
 inoremap jt <Esc>:w<return>
 " movement in insert mode
