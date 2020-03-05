@@ -35,7 +35,7 @@ alias pls='sudo'
 alias vim='nvim'
 alias v='nvim'
 #    git
-alias gg='git add -A && git commit; gp'
+alias gg='gsu && git add -A && git commit; gp'
 alias gpl='git pull'
 alias gp='nohup git push > /dev/null &'
 #    python stuff
