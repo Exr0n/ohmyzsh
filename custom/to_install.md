@@ -1,6 +1,9 @@
+#!/bin/zsh
 # Update submodules
-`gsu`
+gsu
 # Brew
-`brew install neovim go coreutils`
-# gitmux
-`go get -u github.com/arl/gitmux`
+brew install gcc rustup ffmpeg cmake tmux cmake fzf neovim go coreutils
+brew upgrade
+
+# vim plugins
+v -c "PlugInstall | qa"

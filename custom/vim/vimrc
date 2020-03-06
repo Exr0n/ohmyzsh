@@ -55,6 +55,7 @@ Plug 'niklas-8/vim-darkspace'
 Plug 'cocopon/iceberg.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'kaicataldo/material.vim'
+Plug 'ayu-theme/ayu-vim'
 "   HUD
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 " TODO: failed attempt at loading it later and async
@@ -119,7 +120,8 @@ syntax on " turn on sytax highlighting
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 autocmd VimEnter * RainbowToggleOn " TODO: also jank
 "colorscheme darkspace
-colorscheme material | let g:material_theme_style = 'ocean'
+"colorscheme material | let g:material_theme_style = 'ocean'
+colo ayu | let ayucolor="mirage" " for mirage version of theme
 
 "set search stuff
 set hlsearch
@@ -176,6 +178,7 @@ nnoremap <Leader>h :noh<return>
 nmap <Leader>t <Plug>NERDCommenterInvert
 xmap <Leader>t <Plug>NERDCommenterInvert
 "no escape key (escape pressing escape)
+
 inoremap jh <Esc>
 inoremap jt <Esc>:w<return>
 " movement in insert mode
