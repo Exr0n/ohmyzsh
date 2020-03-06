@@ -119,7 +119,7 @@ syntax on " turn on sytax highlighting
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 autocmd VimEnter * RainbowToggleOn " TODO: also jank
 "colorscheme darkspace
-colorscheme material | let g:material_theme_style = 'darker'
+colorscheme material | let g:material_theme_style = 'ocean'
 
 "set search stuff
 set hlsearch
@@ -175,11 +175,6 @@ nnoremap <Leader>h :noh<return>
 " nerd commenter
 nmap <Leader>t <Plug>NERDCommenterInvert
 xmap <Leader>t <Plug>NERDCommenterInvert
-" coc jump to error/warning
-nmap gn <Plug>(coc-diagnostic-next)
-nmap gN <Plug>(coc-diagnostic-prev)
-nmap ge <Plug>(coc-diagnostic-next-error)
-nmap gE <Plug>(coc-diagnostic-prev-error)
 "no escape key (escape pressing escape)
 inoremap jh <Esc>
 inoremap jt <Esc>:w<return>
