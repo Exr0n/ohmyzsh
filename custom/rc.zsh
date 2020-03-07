@@ -1,5 +1,3 @@
-export TERM="xterm-256color"
-
 # Added by Canopy installer on 2015-11-14
 # VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1
 #VIRTUAL_ENV_DISABLE_PROMPT='' source '/Users/lamnguyen/Library/Enthought/Canopy_64bit/User/bin/activate'
@@ -22,7 +20,7 @@ export PATH="$ZSH_CUSTOM/bin:$PATH"
 
 # env variables
 export ZSH_CUSTOM="$ZSH_CUSTOM"
-export EDITOR="vim"
+export EDITOR="nvim"
 #   vim stuff
 export VIMROOT="$ZSH_CUSTOM/vim"
 export VIMCONFIG="$VIMROOT"

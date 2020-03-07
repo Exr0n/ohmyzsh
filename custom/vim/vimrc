@@ -55,6 +55,11 @@ Plug 'niklas-8/vim-darkspace'
 Plug 'cocopon/iceberg.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'kaicataldo/material.vim'
+Plug 'pgavlin/pulumi.vim'
+Plug 'mhartington/oceanic-next'
+Plug 'Badacadabra/vim-archery'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'sonph/onehalf'
 Plug 'ayu-theme/ayu-vim'
 "   HUD
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
@@ -106,6 +111,8 @@ set matchpairs+=<:>
 
 " passive and HUD
 autocmd VimEnter * AirlineRefresh " TODO: cuz it doesn't work sometimes:
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+autocmd VimEnter * RainbowToggleOn " TODO: also jank
 set number " line numbers
 set ruler " display current cursor "coordinates"
 set showmatch " highlight the matching bracket
@@ -116,12 +123,10 @@ set list
 " colors
 set background=dark
 set termguicolors
-syntax on " turn on sytax highlighting
-let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
-autocmd VimEnter * RainbowToggleOn " TODO: also jank
 "colorscheme darkspace
 "colorscheme material | let g:material_theme_style = 'ocean'
-colo ayu | let ayucolor="mirage" " for mirage version of theme
+"colo ayu | let ayucolor="mirage" " for mirage version of theme
+colo dracula
 
 "set search stuff
 set hlsearch
