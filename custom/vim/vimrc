@@ -123,10 +123,11 @@ set listchars=eol:⏎,tab:→·,trail:·,extends:>,precedes:<
 set list
 " colors
 set termguicolors
-"colorscheme darkspace
-"colorscheme material | let g:material_theme_style = 'ocean'
+"colo darkspace
+"colo material | let g:material_theme_style = 'ocean'
 "colo ayu | let ayucolor="mirage" " for mirage version of theme
 colo dracula
+"colo archery
 "TODO: this doesn't work??
 highlight Comment cterm=italic gui=italic
 
