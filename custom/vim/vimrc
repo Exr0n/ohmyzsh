@@ -56,29 +56,17 @@ Plug 'cocopon/iceberg.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'kaicataldo/material.vim'
 Plug 'pgavlin/pulumi.vim'
-Plug 'mhartington/oceanic-next'
 Plug 'Badacadabra/vim-archery'
-Plug 'sonph/onehalf'
-Plug 'ayu-theme/ayu-vim'
-"Plug 'sansbrina/vim-poolside'
+Plug 'ayu-theme/ayu-vim' " rec
 Plug 'vim-scripts/pink'
 Plug 'ntk148v/vim-horizon'
 "Decent 
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'wadackel/vim-dogrun'
 "Favorite so far:
-Plug 'shapeoflambda/dark-purple.vim'
+Plug 'shapeoflambda/dark-purple.vim' " rec
 Plug 'arzg/vim-colors-xcode'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
-" colors
-set termguicolors
-"colo darkspace
-"colo material | let g:material_theme_style = 'ocean'
-"colo ayu | let ayucolor="mirage" " for mirage version of theme
-"colo dracula
-"colo archery
-"colo onehalfdark
-colo xcodedarkhc
 
 "   HUD
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
@@ -134,6 +122,20 @@ set showmatch " highlight the matching bracket
 set encoding=utf-8
 set listchars=eol:⏎,tab:→·,trail:·,extends:>,precedes:<
 set list
+
+
+" colors
+set termguicolors
+"colo darkspace
+"colo material | let g:material_theme_style = 'ocean'
+"colo ayu | let ayucolor="mirage" " for mirage version of theme
+"colo dracula
+"colo archery
+"colo onehalfdark
+"colo xcodedarkhc
+colo dark_purple
+
+
 "TODO: this doesn't work??
 highlight Comment cterm=italic gui=italic
 
@@ -201,6 +203,7 @@ inoremap <C-l> <right>
 
 " clipboard https://coderwall.com/p/v-st8w/vim-copy-to-system-clipboard-on-a-mac
 xmap <Leader>y :w !pbcopy<CR><CR>
+nmap <Leader>y :w !pbcopy<CR><CR>
 nmap <Leader>yy :%w !pbcopy<CR><CR>
 
 " split direction
