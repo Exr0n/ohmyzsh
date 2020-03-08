@@ -49,7 +49,6 @@ imap <C-f> <Plug>(fzf-complete-line)
 nmap <C-f> :Lines<return>
 
 " Colors
-" Colors
 Plug 'cocopon/pgmnt.vim'
 Plug 'keith/parsec.vim'
 Plug 'niklas-8/vim-darkspace'
@@ -59,13 +58,27 @@ Plug 'kaicataldo/material.vim'
 Plug 'pgavlin/pulumi.vim'
 Plug 'mhartington/oceanic-next'
 Plug 'Badacadabra/vim-archery'
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sonph/onehalf'
 Plug 'ayu-theme/ayu-vim'
-Plug 'arzg/vim-colors-xcode'
-Plug 'wadackel/vim-dogrun'
-Plug 'shapeoflambda/dark-purple.vim'
+"Plug 'sansbrina/vim-poolside'
+Plug 'vim-scripts/pink'
 Plug 'ntk148v/vim-horizon'
+"Decent 
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'wadackel/vim-dogrun'
+"Favorite so far:
+Plug 'shapeoflambda/dark-purple.vim'
+Plug 'arzg/vim-colors-xcode'
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
+" colors
+set termguicolors
+"colo darkspace
+"colo material | let g:material_theme_style = 'ocean'
+"colo ayu | let ayucolor="mirage" " for mirage version of theme
+"colo dracula
+"colo archery
+"colo onehalfdark
+colo xcodedarkhc
 
 "   HUD
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
@@ -121,13 +134,6 @@ set showmatch " highlight the matching bracket
 set encoding=utf-8
 set listchars=eol:⏎,tab:→·,trail:·,extends:>,precedes:<
 set list
-" colors
-set termguicolors
-"colo darkspace
-"colo material | let g:material_theme_style = 'ocean'
-"colo ayu | let ayucolor="mirage" " for mirage version of theme
-colo dracula
-"colo archery
 "TODO: this doesn't work??
 highlight Comment cterm=italic gui=italic
 
