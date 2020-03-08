@@ -2,7 +2,7 @@
 # Update submodules
 gsu
 # Brew
-brew install ack gcc rustup ffmpeg cmake tmux cmake fzf neovim go coreutils
+brew install tig flake8 node yarn ack gnupg gcc gmp rustup ffmpeg cmake tmux cmake fzf neovim go coreutils
 brew upgrade
 
 # vim plugins
