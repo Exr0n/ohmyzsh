@@ -51,17 +51,17 @@ alias ss='screen -S '
 alias s='trf'
 
 # rust/cargo things
-source $HOME/.cargo/env
+[[ -f $HOME/.cargo/env ]] && source $HOME/.cargo/env
 alias cn='cargo new --vcs git'
 alias cr='cargo run'
 
 # functions
 #    cd to parent directory of file, https://askubuntu.com/a/316632
-function fcd () { [ -f "$1" ] && { \cd "$(dirname "$1")"; } || { \cd "$1"; } ; pwd; }
+function fcd () { [[ -n "$1" ]] && { [ -f "$1" ] && { \cd "$(dirname "$1")"; } || { \cd "$1"; } ; } || { \cd $HOME; } ; }
 alias cd='fcd'
 
 #    Alias to auto open files with vim
-alias -s {txt,md,cpp,rs,py,properties,yml,yaml}=vim
+alias -s {txt,md,cpp,rs,py,properties,yml,yaml}=nvim
 
 #    One off aliases (like config commands)
 #alias set_right_alt='cd $ZSH_CUSTOM/keymap_util && hidutil property --set $(./map) && -'
