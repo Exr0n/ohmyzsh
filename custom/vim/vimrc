@@ -60,6 +60,8 @@ Plug 'Badacadabra/vim-archery'
 Plug 'ayu-theme/ayu-vim' " rec
 Plug 'vim-scripts/pink'
 Plug 'ntk148v/vim-horizon'
+Plug 'victorze/foo'
+Plug 'sainnhe/edge'
 "Decent 
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'wadackel/vim-dogrun'
@@ -133,6 +135,7 @@ set termguicolors
 "colo archery
 "colo onehalfdark
 "colo xcodedarkhc
+"colo hyper
 colo dark_purple
 
 
